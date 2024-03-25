@@ -268,3 +268,87 @@ Received Import Request.
 Start importing Assets/Scripts/ScriptableObjects/RecipeScriptableObject.cs using Guid(69f97e3a7b0dc0c4bb9a843f0de9bcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260bd2309cf4b39a0cf185cc154f433f') in 0.015757 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1925.444029 seconds.
+  path: Assets/Data/Recipes/Sticks.asset
+  artifactKey: Guid(5d42d008ddef817438c1c6c1a8668f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Recipes/Sticks.asset using Guid(5d42d008ddef817438c1c6c1a8668f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ce5665c359ceea0b68e08221ae5f49') in 1.570315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16f05f000 may have been prematurely finalized
+- Loaded All Assemblies, in  6.734 seconds
+Refreshing native plugins compatible for Editor in 16.89 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.858 seconds
+Domain Reload Profiling: 13643ms
+	BeginReloadAssembly (4348ms)
+		ExecutionOrderSort (15ms)
+		DisableScriptedObjects (339ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (8ms)
+		CreateAndSetChildDomain (2129ms)
+	RebuildCommonClasses (221ms)
+	RebuildNativeTypeToScriptingClass (74ms)
+	initialDomainReloadingComplete (176ms)
+	LoadAllAssembliesAndSetupDomain (1958ms)
+		LoadAssemblies (2671ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (258ms)
+			TypeCache.Refresh (205ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (47ms)
+	FinalizeReload (6865ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1757ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (186ms)
+			SetLoadedEditorAssemblies (66ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (205ms)
+			ProcessInitializeOnLoadAttributes (1191ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 10.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4018 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (200.2 KB). Loaded Objects now: 4509.
+Memory consumption went from 252.6 MB to 252.4 MB.
+Total: 38.850542 ms (FindLiveObjects: 0.602000 ms CreateObjectMapping: 0.202125 ms MarkObjects: 37.239083 ms  DeleteObjects: 0.806375 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 531.375134 seconds.
+  path: Assets/Data/Recipes/Wooden pickaxe.asset
+  artifactKey: Guid(72b88aebdb0279e4491b27bbeb347654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/Recipes/Wooden pickaxe.asset using Guid(72b88aebdb0279e4491b27bbeb347654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1c04b8fb241e6b6567c39f8c5c5e67b') in 1.111220 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27

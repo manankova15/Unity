@@ -17,10 +17,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: e94a59ab832fce149aee90d1888880e3, type: 2}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: e94a59ab832fce149aee90d1888880e3, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  craftResultItem: {fileID: 0}
-  resultCount: 1
+  craftResultItem: {fileID: 11400000, guid: f68b192d0f5a0744fbed26168c64db2c, type: 2}
+  resultCount: 2
