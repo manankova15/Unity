@@ -22,9 +22,27 @@ public class RecipeEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        base.OnInspectorGUI();
+
+        var recipeObj = (RecipeScriptableObject)target;
+        EditorGUILayout.LabelField("Craft");
+
+        for (int i = 0; i < 3; i++)
+        {
+            EditorGUILayout.BeginHorizontal();
+            for (int j = 0; j < 3; j++)
+            {
+                recipeObj.craftItems[3*i+j] = EditorGUILayout.ObjectField(recipeObj.craftItems[3*i+j],
+                    typeof(CraftItemScriptableObject), false) as CraftItemScriptableObject;
+            }
+            EditorGUILayout.EndHorizontal();
+        }
         
+        EditorGUILayout.LabelField("Result");
+        recipeObj.craftResultItem = EditorGUILayout.ObjectField(recipeObj.craftResultItem, typeof(CraftItemScriptableObject), false) as CraftItemScriptableObject;
+        recipeObj.resultCount = EditorGUILayout.IntField("Count:", recipeObj.resultCount);
+        serializedObject.ApplyModifiedProperties();
     }
 }
 #endif
 #endregion
-
