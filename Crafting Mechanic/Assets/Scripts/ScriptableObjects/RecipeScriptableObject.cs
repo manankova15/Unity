@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 #if UNITY_EDITOR
 using ScriptableObjects;
@@ -20,28 +21,36 @@ namespace ScriptableObjects
 [CustomEditor(typeof(RecipeScriptableObject))]
 public class RecipeEditor : Editor
 {
+    private SerializedProperty craftItems;
+    private SerializedProperty craftResultItem;
+    private SerializedProperty resultCount;
+
+    private void OnEnable()
+    {
+        craftItems = serializedObject.FindProperty("craftItems");
+        craftResultItem = serializedObject.FindProperty("craftResultItem");
+        resultCount = serializedObject.FindProperty("resultCount");
+    }
+
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        serializedObject.Update();
 
-        var recipeObj = (RecipeScriptableObject)target;
         EditorGUILayout.LabelField("Craft");
-
         for (int i = 0; i < 3; i++)
         {
             EditorGUILayout.BeginHorizontal();
             for (int j = 0; j < 3; j++)
-            {
-                recipeObj.craftItems[3*i+j] = EditorGUILayout.ObjectField(recipeObj.craftItems[3*i+j],
-                    typeof(CraftItemScriptableObject), false) as CraftItemScriptableObject;
-            }
+                EditorGUILayout.ObjectField(craftItems.GetArrayElementAtIndex(3*i+j), GUIContent.none, GUILayout.MaxWidth(EditorGUIUtility.currentViewWidth/3-9.5f));
             EditorGUILayout.EndHorizontal();
         }
         
         EditorGUILayout.LabelField("Result");
-        recipeObj.craftResultItem = EditorGUILayout.ObjectField(recipeObj.craftResultItem, typeof(CraftItemScriptableObject), false) as CraftItemScriptableObject;
-        recipeObj.resultCount = EditorGUILayout.IntField("Count:", recipeObj.resultCount);
-        serializedObject.ApplyModifiedProperties();
+        EditorGUILayout.ObjectField(craftResultItem);
+        EditorGUILayout.PropertyField(resultCount);
+        
+        if (serializedObject.hasModifiedProperties)
+            serializedObject.ApplyModifiedProperties();
     }
 }
 #endif
